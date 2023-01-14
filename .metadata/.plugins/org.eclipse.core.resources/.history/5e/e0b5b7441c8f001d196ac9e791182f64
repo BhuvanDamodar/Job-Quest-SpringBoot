@@ -1,0 +1,18 @@
+package com.recruiter.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.hm.recruiter.model.Recruiter;
+import com.hm.recruiter.model.Skills;
+
+
+public interface RecruiterRepo extends JpaRepository<Recruiter, Long> {
+	public void deleteByCompanyName(String companyName);
+	
+//	@Query(value="select r.*, s.skill from recruiter r join skills s on r.id = s.s_id;",nativeQuery = true)
+	public List<Recruiter> findByDropdownIn(List<Skills> skill);
+	
+}

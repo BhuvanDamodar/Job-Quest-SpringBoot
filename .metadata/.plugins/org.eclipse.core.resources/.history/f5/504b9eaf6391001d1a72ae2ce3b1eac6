@@ -1,0 +1,12 @@
+spring.application.name=API-GATEWAY
+server.port=9191
+eureka.instance.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
+management.endpoints.web.exposure.include=*
+
+spring.cloud.gateway.routes[0].id=JWT-USER
+spring.cloud.gateway.routes[0].uri=lb://JWT-USER
+spring.cloud.gateway.routes[0].predicates[0]=Path=/**
+
+spring.cloud.gateway.routes[1].id=RECRUITER-FORM
+spring.cloud.gateway.routes[1].uri=lb://RECRUITER-FORM
+spring.cloud.gateway.routes[1].predicates[0]=Path=/**

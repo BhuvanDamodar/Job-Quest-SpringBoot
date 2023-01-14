@@ -1,0 +1,14 @@
+package com.recruiter;
+
+
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@RunWith(MockitoJUnitRunner.class)
+public class RecruiterServiceMockTest{
+	
+	@Mock
+	private RecruiterRepo
+}

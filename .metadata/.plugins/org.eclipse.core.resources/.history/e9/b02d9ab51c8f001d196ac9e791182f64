@@ -1,0 +1,5 @@
+package com.recruiter.dto;
+
+public class Recruiterrequest {
+
+}

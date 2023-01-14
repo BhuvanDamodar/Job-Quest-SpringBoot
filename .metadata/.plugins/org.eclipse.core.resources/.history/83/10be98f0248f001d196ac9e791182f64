@@ -1,0 +1,13 @@
+package com.project.api.service;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ProjectApiServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ProjectApiServiceApplication.class, args);
+	}
+
+}

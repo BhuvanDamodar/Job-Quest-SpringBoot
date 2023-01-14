@@ -1,0 +1,5 @@
+package com.recruiter.repository;
+
+public class RecruiterRepo {
+
+}

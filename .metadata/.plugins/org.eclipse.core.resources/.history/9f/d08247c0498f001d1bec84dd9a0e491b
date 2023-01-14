@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: project-api-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: spring-boot-recruiter
+        uri:
+          lb://spring-boot-recruiter   
+        predicates:
+        - Path=/**  
+        
+      - id: jwtimpl
+        uri:
+          lb://jwtimpl   
+        predicates:
+        - Path=/** 
+        
+       
+        
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+      globalcors:
+          cors-configurations: 
+            '[/**]':
+              allowed-origins: "*"
+              allowed-methods: "*"
+              allowed-headers: "*"
+
+        
+
+server:
+  port: 8888
